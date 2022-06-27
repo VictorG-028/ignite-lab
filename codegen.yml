@@ -1,0 +1,17 @@
+schema: https://api-sa-east-1.graphcms.com/v2/cl4us9tsc160h01uheeph4gao/master
+
+# LEMBRAR: O nome-do-arquivo .graphql será usado para criar a função
+# Aviso: É necessário separar com '-' o nome-do-arquivo ? Não precisa !
+documents: ./src/graphql/**/*.graphql
+
+generates:
+  ./src/graphql/myGeneratedGraphql.ts: # path do arquivo de output do comando "npm run codegen"
+    plugins: # Cada plugin foi npm installed
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: false # Padrão antigo que utiliza classes para criar componentes React
+      withComponent: false
