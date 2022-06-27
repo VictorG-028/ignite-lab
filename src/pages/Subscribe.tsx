@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCreateSubscriberMutation } from "../graphql/myGeneratedGraphql";
 import { Logo } from "../components/Logo";
+import background_code_png from "../../src/assets/code_bg.png";
 
 // const CREATE_USBSCRIBER_MUTATION = gql`
 //   mutation CreateSubscriber ($name: String!, $email: String!) {
@@ -77,7 +78,7 @@ export function Subscribe() {
         </div>
       </div>
 
-      <img src="/src/assets/code_bg.png" />
+      <img src={background_code_png} />
 
     </div>
   );
